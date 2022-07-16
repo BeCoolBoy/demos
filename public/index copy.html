@@ -28,22 +28,15 @@
     <!-- 6Lfa6vUgAAAAAENlrvryIJ-ZF52W2FrZZxFjAZkS   communication between your site and reCAPTCHA -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-      <script>
-      var recaptcha_response = '';
-      function submitUserForm() {
-          if(recaptcha_response.length == 0) {
-              document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
-              return false;
-          }
-          return true;
-      }
-      
-      function verifyCaptcha(token) {
-          recaptcha_response = token;
-          document.getElementById('g-recaptcha-error').innerHTML = '';
-      }
-      </script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+       var correctCaptcha = function(response) {
+        // alert(response);
+        console.log(response)
+        debugger;
+      };
+    </script>
     <title>React App</title>
   </head>
   <body>
