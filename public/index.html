@@ -28,7 +28,18 @@
     <!-- 6Lcy3PUgAAAAAJFAVnkgM8Oct9T4Gu2b_wCn_I3D   communication between your site and reCAPTCHA -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lcy3PUgAAAAABK8VPU-U-eI4zTqlaM7BDb5_g38"></script>
+    <script>
+        grecaptcha.ready(function() {
+        // do request for recaptcha token
+        // response is promise with passed token
+            grecaptcha.execute('6Lcy3PUgAAAAABK8VPU-U-eI4zTqlaM7BDb5_g38', {action:'validate_captcha'})
+                      .then(function(token) {
+                // add token value to form
+                document.getElementById('g-recaptcha-response').value = token;
+            });
+        });
+    </script>
     <title>React App</title>
   </head>
   <body>
