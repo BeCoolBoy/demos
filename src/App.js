@@ -35,7 +35,7 @@ function App() {
             <label>Email:</label>
             <input id="email" name="email" type="email" />
         </div>
-        <div class="g-recaptcha" data-sitekey="6LffpPEgAAAAAOibceQnHN6enOfj99F7JaFrAACw"></div>
+        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
         <div>
             <input id="submit" type="submit" />
         </div>
